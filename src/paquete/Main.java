@@ -21,6 +21,11 @@ public class Main {
     System.out.println(profesor.calcularMedia(alumno));
 
 
+    /*** Creación del usuario con nombre, año de nacimiento y DNI ***/
+    Alumno alumnoNuevo = new Alumno(a1,a2,a3,"Pepe", 2003, "12345678J");
+
+    System.out.println(alumnoNuevo.toString());
+
 
     }
 }

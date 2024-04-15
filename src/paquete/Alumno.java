@@ -8,6 +8,10 @@ public class Alumno {
     private Asignatura SI;
     private Asignatura BD;
 
+    /*** Mejora de atributos para el alumno ***/
+    private String nombre;
+    private int anioNac;
+    private String DNI;
 
 
     /***** Constructores *****/
@@ -26,7 +30,18 @@ public class Alumno {
 
     }
 
-    /******* Getter y Setter ****/
+
+    /*** Constructor para añadir el nombre, el año del nacimineto y el DNI***/
+    public Alumno(Asignatura programacion, Asignatura SI, Asignatura BD, String nombre, int anioNac, String DNI) {
+        this.programacion = programacion;
+        this.SI = SI;
+        this.BD = BD;
+        this.nombre = nombre;
+        this.anioNac = anioNac;
+        this.DNI = DNI;
+    }
+
+    /******* Métodos para obtener los datos ****/
     public Asignatura getProgramacion() {
         return programacion;
     }
@@ -39,6 +54,18 @@ public class Alumno {
         return BD;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getAnioNac() {
+        return anioNac;
+    }
+
+    public String getDNI() {
+        return DNI;
+    }
+
     /***** Métodos ******/
 
     @Override
@@ -47,6 +74,9 @@ public class Alumno {
                 "programacion=" + programacion.toString() +
                 ", SI=" + SI.toString() +
                 ", BD=" + BD.toString() +
+                ", nombre='" + nombre + '\'' +
+                ", anioNac=" + anioNac +
+                ", DNI='" + DNI + '\'' +
                 '}';
     }
 }
