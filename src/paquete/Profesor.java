@@ -2,6 +2,8 @@ package paquete;
 
 import paquete.Alumno;
 
+import java.util.Random;
+
 public class Profesor {
 
     /*** Métodos ***/
@@ -9,9 +11,12 @@ public class Profesor {
     //Pone notas aleatorias entre 0 y 10 a cada asignatura de un alumno
     public void ponerNotas(Alumno alumno){
         /* Notas aleatorias entre 0 y 10*/
-        int n1 = (int) (Math.random() * 11);
-        int n2 = (int) (Math.random() * 11);
-        int n3 = (int) (Math.random() * 11);
+
+        /* Cambio realizado en la nueva versión */
+        Random numRandom = new Random();
+        int n1 = numRandom.nextInt(0, 11) ;
+        int n2 = numRandom.nextInt(0, 11) ;
+        int n3 = numRandom.nextInt(0, 11) ;
 
         //Pone las notas
         alumno.getProgramacion().setCalificacion(n1);
